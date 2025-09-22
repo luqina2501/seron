@@ -1,0 +1,13 @@
+[build]
+    base = "frontend"
+    command = "npm run build"
+    publish = "frontend/dist"
+
+[functions]
+    directory = "frontend/netlify/functions"
+
+[context.production]
+    command = "npm ci && npm run build"
+
+[context.deploy-preview]
+    command = "npm ci && npm run build:preview"
