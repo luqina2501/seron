@@ -1,13 +1,16 @@
 [build]
     base = "frontend"
-    command = "npm run build"
+    command = "bun install && bun run build"
     publish = "frontend/dist"
 
 [functions]
     directory = "frontend/netlify/functions"
 
 [context.production]
-    command = "npm ci && npm run build"
+    command = "bun install --frozen-lockfile && bun run build"
 
 [context.deploy-preview]
-    command = "npm ci && npm run build:preview"
+    command = "bun install && bun run build"
+
+[context.branch-deploy]
+    command = "bun install && bun run build"
