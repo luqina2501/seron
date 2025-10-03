@@ -1,28 +1,15 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import '../styles/global.css';
+import '@styles/global.css';
+import Layout from '@layouts/Layout.astro';
+import Button from '@components/Button.astro';
+
+
 const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ pageTitle }</title>
-		<style>
-			h1 {
-				color: aquamarine;
-				front-size: 4rem;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<h1>Hello Sherma</h1>
-		<img src="https://cdn.wikimg.net/en/hkwiki/images/e/ef/Sherma_Singing.png">
-		<Footer />
-	</body>
-</html>
+<Layout pageTitle={pageTitle}>
+	<div class="grid place-items-center h-screen content-center">
+		<Button>Click for suprise</Button>
+		<a href="/about" class="text-diffc p-4 und 'erline">view about page</a>
+	</div>
+</Layout>
