@@ -5,9 +5,24 @@ body{
 }
 
 @theme {
-    --color-darkc: #4b4743;
-    --color-whitc: #deceba;
-    --color-primc: #491d20;
-    --color-shadc: #e1b67f;
-    --color-diffc: #004852;
+    /* base */
+    --color-darkc: oklch(0.4005 0.0085 67.58);
+    --color-whitc: oklch(0.8592 0.0324 73.49);
+    --color-primc: oklch(0.2967 0.0672 17.92);
+    --color-shadc: oklch(0.8021 0.087 72.92);
+    --color-diffc: oklch(0.3682 0.0638 210.4879);
+
+    /* dark variants (L - 0.1) */
+    --color-darkc-dark: oklch(0.3005 0.0085 67.58);
+    --color-whitc-dark: oklch(0.7592 0.0324 73.49);
+    --color-primc-dark: oklch(0.1967 0.0672 17.92);
+    --color-shadc-dark: oklch(0.7021 0.087 72.92);
+    --color-diffc-dark: oklch(0.2682 0.0638 210.4879);
+
+    /* light variants (L + 0.1) */
+    --color-darkc-light: oklch(0.5005 0.0085 67.58);
+    --color-whitc-light: oklch(0.9592 0.0324 73.49);
+    --color-primc-light: oklch(0.3967 0.0672 17.92);
+    --color-shadc-light: oklch(0.9021 0.087 72.92);
+    --color-diffc-light: oklch(0.4682 0.0638 210.4879);
 }
